@@ -22,7 +22,7 @@ class Solution:
             if node.left:
                 left = tree_len(node.left)
             if node.right:
-                right = tree_len(node.right) if node.right else 0
+                right = tree_len(node.right)
             if left + right > self.diameter:
                 self.diameter = left + right
             return 1 + max(left, right)
